@@ -1,7 +1,7 @@
 # 🛒 eCommerce App – MongoDB + Mongoose
 This project outlines the schema design and API development for a simple eCommerce application using MongoDB with Mongoose in Node.js. It includes collections for Users, Products, Orders, and Carts, along with a bonus API to fetch all products from a specific vendor.
 
-## 📚 Technologies Used
+## Technologies Used
 MongoDB (NoSQL Database)
 
 Mongoose (ODM for MongoDB)
@@ -10,8 +10,8 @@ Node.js
 
 Express.js
 
-##  📁 Collections and Schemas (In repository check  models)
-1. 🧑‍💼 User Collection
+##   Collections and Schemas (In repository check  models)
+1. User Collection
 Stores user details including name, email, role, password hash, and associated cart.
 ```
 {
@@ -22,7 +22,7 @@ Stores user details including name, email, role, password hash, and associated c
   cart: ObjectId (ref: 'Cart')
 }
 ```
-2. 📦 Product Collection
+2.  Product Collection
 Each product includes details like price, category, stock, and the vendor who created it.
 ```
 {
@@ -33,7 +33,7 @@ Each product includes details like price, category, stock, and the vendor who cr
   vendorId: ObjectId (ref: 'User')
 }
 ```
-3. 📑 Order Collection
+3.  Order Collection
 Represents user orders containing multiple product references and their status.
 ```
 {
@@ -42,7 +42,7 @@ Represents user orders containing multiple product references and their status.
   status: ['placed', 'shipped', 'delivered']
 }
 ```
-4. 🛒 Cart Collection
+4.  Cart Collection
 Each user has a unique cart with products, quantities, and a total amount.
 ```
 {
@@ -58,8 +58,8 @@ Each user has a unique cart with products, quantities, and a total amount.
 
 ```
 
-## 🌐 API Routes (In repository check server.js)
-✅ Bonus: Get All Products of a Vendor
+##  API Routes (In repository check server.js)
+ Bonus: Get All Products of a Vendor
 Endpoint:
 ```
 GET /vendor/:vendorId/products
